@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekend Workshops — Culina Studio | Explore • Cook • Master</title>
+  <meta name="description" content="Weekend cooking workshops at Culina Studio — five-to-six-hour deep dives with guest chefs, market-fresh ingredients and a long-table lunch." />
+
+  <!-- Apply saved theme + direction before paint (prevents flash) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('culina-theme');
+        var d = localStorage.getItem('culina-dir');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        if (d === 'rtl' || d === 'ltr') document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="icon" type="image/png" href="logo-light.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="workshops.css" />
+</head>
+<body class="workshops-page">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Culina Studio home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-name">Culina Studio</span>
+          <span class="brand-tagline">Explore • Cook • Master</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li class="has-dd">
+            <div class="dd-wrap">
+              <a href="index.html" class="nav-link">Home</a>
+              <button class="dd-toggle" type="button" aria-expanded="false" aria-controls="ddHome" aria-label="Show home page options"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </div>
+            <ul class="dd-menu" id="ddHome">
+              <li><a href="index.html" class="dd-link"><span class="dd-num">01</span><span class="dd-txt"><strong>Home 1</strong><small>Classic studio home</small></span></a></li>
+              <li><a href="home2.html" class="dd-link"><span class="dd-num">02</span><span class="dd-txt"><strong>Home 2</strong><small>Alternate home layout</small></span></a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="service.html" class="nav-link">Services</a></li>
+          <li><a href="classes.html" class="nav-link">Classes</a></li>
+          <li><a href="workshops.html" class="nav-link active" aria-current="page">Workshops</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="user-dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn dir-btn" id="dirToggle" type="button" aria-label="Toggle right-to-left layout" aria-pressed="false">
+          <span class="dir-label" aria-hidden="true">↔</span>
+        </button>
+        <a href="login.html" class="btn btn-primary header-cta magnetic">Login</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <main id="main">
+
+    <!-- ================= 1. HERO — shuffling poster deck + countdown ================= -->
+    <section class="ws-hero" id="top">
+      <div class="ws-hero-ring" aria-hidden="true"></div>
+      <div class="container ws-hero-grid">
+        <div class="ws-hero-copy">
+          <span class="tagline ws-fade" style="--d:.2s">Weekend Workshops</span>
+          <h1 class="ws-hero-title" aria-label="Long weekends. Slow food. Good company.">
+            <span class="ws-line" aria-hidden="true"><span class="ws-chars" data-text="Long weekends."></span></span>
+            <span class="ws-line" aria-hidden="true"><span class="ws-chars" data-text="Slow food."></span></span>
+            <span class="ws-line" aria-hidden="true"><em class="ws-chars" data-text="Good company."></em></span>
+          </h1>
+          <p class="ws-hero-text ws-fade" style="--d:1.3s">
+            Five-to-six-hour deep dives every Saturday and Sunday — welcome drink, market-fresh ingredients,
+            a chef by your side and a long-table lunch to finish.
+          </p>
+
+          <div class="countdown ws-fade" style="--d:1.45s" aria-live="polite">
+            <p class="cd-label">Next workshop: <strong id="cdTitle">Neapolitan Pizza Masterclass</strong></p>
+            <div class="cd-boxes">
+              <div class="cd-box"><span id="cdD">00</span><small>Days</small></div>
+              <div class="cd-box"><span id="cdH">00</span><small>Hours</small></div>
+              <div class="cd-box"><span id="cdM">00</span><small>Mins</small></div>
+              <div class="cd-box"><span id="cdS">00</span><small>Secs</small></div>
+            </div>
+          </div>
+
+          <div class="ws-hero-actions ws-fade" style="--d:1.6s">
+            <a href="#reserve" class="btn btn-primary">Reserve a Spot</a>
+            <a href="#calendar" class="btn btn-secondary">See All Dates</a>
+          </div>
+        </div>
+
+        <div class="deck-wrap ws-fade" style="--d:.5s">
+          <div class="deck" id="deck" aria-label="Featured workshops">
+            <article class="poster" data-i="0">
+              <img src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Plated dish from the pizza masterclass" data-fallback="pizza,oven" />
+              <div class="poster-body">
+                <span class="poster-date"><b>21</b>Nov · Sat</span>
+                <h3>Neapolitan Pizza Masterclass</h3>
+                <p>10:00 AM – 3:00 PM · ₹5,499</p>
+              </div>
+            </article>
+            <article class="poster" data-i="1">
+              <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=800&q=80" alt="Table of desserts and dishes" data-fallback="dessert,table" />
+              <div class="poster-body">
+                <span class="poster-date"><b>22</b>Nov · Sun</span>
+                <h3>Plated Desserts &amp; Patisserie</h3>
+                <p>11:00 AM – 4:30 PM · ₹5,999</p>
+              </div>
+            </article>
+            <article class="poster" data-i="2">
+              <img src="https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=800&q=80" alt="Freshly baked pizza on a board" data-fallback="brunch,food" />
+              <div class="poster-body">
+                <span class="poster-date"><b>28</b>Nov · Sat</span>
+                <h3>Farm-to-Table Brunch Bowls</h3>
+                <p>9:30 AM – 2:30 PM · ₹4,499</p>
+              </div>
+            </article>
+          </div>
+          <div class="deck-controls">
+            <button class="deck-btn" id="deckPrev" type="button" aria-label="Previous workshop">←</button>
+            <span class="deck-count"><b id="deckNum">01</b> / 03</span>
+            <button class="deck-btn" id="deckNext" type="button" aria-label="Next workshop">→</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ws-ticker" aria-hidden="true">
+        <div class="ws-ticker-track">
+          <span>Pizza Masterclass · 21 Nov</span><span>✦</span><span>Plated Desserts · 22 Nov</span><span>✦</span><span>Brunch Bowls · 28 Nov</span><span>✦</span><span>Fresh Pasta Feast · 5 Dec</span><span>✦</span><span>Taco Fiesta · 13 Dec</span><span>✦</span><span>Gelato Lab · 19 Dec</span><span>✦</span>
+          <span>Pizza Masterclass · 21 Nov</span><span>✦</span><span>Plated Desserts · 22 Nov</span><span>✦</span><span>Brunch Bowls · 28 Nov</span><span>✦</span><span>Fresh Pasta Feast · 5 Dec</span><span>✦</span><span>Taco Fiesta · 13 Dec</span><span>✦</span><span>Gelato Lab · 19 Dec</span><span>✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 2. FEATURED WORKSHOP ================= -->
+    <section class="ws-section ws-featured" id="featured">
+      <div class="container featured-grid">
+        <figure class="featured-img" data-ws="left">
+          <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=1000&q=80" alt="Beautifully plated main course" loading="lazy" data-fallback="steak,plate" />
+          <span class="featured-tag">Featured this weekend</span>
+          <span class="featured-seats"><b>4</b> seats left</span>
+        </figure>
+        <div class="featured-copy" data-ws="right">
+          <span class="tagline">Spotlight Workshop</span>
+          <h2 class="ws-title">Neapolitan Pizza Masterclass</h2>
+          <p class="ws-text">Learn the 48-hour dough, hand-stretching, San Marzano sauce and blistering bakes in our wood-fired oven with Chef Giulia.</p>
+          <ol class="agenda">
+            <li><time>10:00</time><div><strong>Welcome &amp; espresso</strong><span>Meet the chef and the group</span></div></li>
+            <li><time>10:30</time><div><strong>Dough science</strong><span>Flour, hydration and fermentation</span></div></li>
+            <li><time>12:00</time><div><strong>Stretch &amp; top</strong><span>Classic margherita to your own creation</span></div></li>
+            <li><time>13:30</time><div><strong>Fire &amp; bake</strong><span>90-second bakes in the wood oven</span></div></li>
+            <li><time>14:15</time><div><strong>Long-table lunch</strong><span>Eat, share and take dough home</span></div></li>
+          </ol>
+          <div class="featured-foot">
+            <span class="ws-price">₹5,499 <small>per person</small></span>
+            <a href="#reserve" class="btn btn-primary" data-pick="pizza">Book This Workshop</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. CALENDAR ================= -->
+    <section class="ws-section ws-calendar" id="calendar">
+      <div class="container">
+        <div class="ws-head" data-ws="up">
+          <span class="tagline">Upcoming Dates</span>
+          <h2 class="ws-title">The weekend calendar</h2>
+          <p class="ws-text">Filter by month and reserve before seats run out — every workshop is capped at 14 guests.</p>
+        </div>
+        <div class="month-tabs" data-ws="up" role="group" aria-label="Filter by month">
+          <button class="month-tab is-on" data-m="all" type="button">All dates</button>
+          <button class="month-tab" data-m="nov" type="button">November</button>
+          <button class="month-tab" data-m="dec" type="button">December</button>
+        </div>
+        <div class="ws-grid" id="wsGrid">
+          <article class="ws-card" data-m="nov" data-ws="up" style="--stagger:0">
+            <div class="ws-card-img"><img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80" alt="Layered Italian dessert" loading="lazy" data-fallback="tiramisu" /></div>
+            <div class="ws-card-date"><b>21</b><span>Nov<br />Sat</span></div>
+            <div class="ws-card-body"><h3>Neapolitan Pizza Masterclass</h3><p>10:00 AM – 3:00 PM · Chef Giulia</p><div class="ws-card-foot"><span class="ws-price-sm">₹5,499</span><span class="ws-left">4 left</span><a href="#reserve" class="btn btn-primary btn-sm" data-pick="pizza">Reserve</a></div></div>
+          </article>
+          <article class="ws-card" data-m="nov" data-ws="up" style="--stagger:1">
+            <div class="ws-card-img"><img src="https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&w=800&q=80" alt="Pasta with tomatoes and herbs" loading="lazy" data-fallback="patisserie" /></div>
+            <div class="ws-card-date"><b>22</b><span>Nov<br />Sun</span></div>
+            <div class="ws-card-body"><h3>Plated Desserts &amp; Patisserie</h3><p>11:00 AM – 4:30 PM · Chef Camille</p><div class="ws-card-foot"><span class="ws-price-sm">₹5,999</span><span class="ws-left">6 left</span><a href="#reserve" class="btn btn-primary btn-sm" data-pick="desserts">Reserve</a></div></div>
+          </article>
+          <article class="ws-card" data-m="nov" data-ws="up" style="--stagger:2">
+            <div class="ws-card-img"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="Fresh salad bowl" loading="lazy" data-fallback="salad,bowl" /></div>
+            <div class="ws-card-date"><b>28</b><span>Nov<br />Sat</span></div>
+            <div class="ws-card-body"><h3>Farm-to-Table Brunch Bowls</h3><p>9:30 AM – 2:30 PM · Chef Meera</p><div class="ws-card-foot"><span class="ws-price-sm">₹4,499</span><span class="ws-left">8 left</span><a href="#reserve" class="btn btn-primary btn-sm" data-pick="brunch">Reserve</a></div></div>
+          </article>
+          <article class="ws-card" data-m="dec" data-ws="up" style="--stagger:0">
+            <div class="ws-card-img"><img src="https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Colourful bowl of food" loading="lazy" data-fallback="pasta,feast" /></div>
+            <div class="ws-card-date"><b>05</b><span>Dec<br />Sat</span></div>
+            <div class="ws-card-body"><h3>Fresh Pasta Feast</h3><p>10:00 AM – 3:30 PM · Chef Giulia</p><div class="ws-card-foot"><span class="ws-price-sm">₹5,299</span><span class="ws-left">10 left</span><a href="#reserve" class="btn btn-primary btn-sm" data-pick="pasta">Reserve</a></div></div>
+          </article>
+          <article class="ws-card" data-m="dec" data-ws="up" style="--stagger:1">
+            <div class="ws-card-img"><img src="https://images.unsplash.com/photo-1565299543923-37dd37887442?auto=format&fit=crop&w=800&q=80" alt="Plate of tacos" loading="lazy" data-fallback="tacos,mexican" /></div>
+            <div class="ws-card-date"><b>13</b><span>Dec<br />Sun</span></div>
+            <div class="ws-card-body"><h3>Taco Fiesta &amp; Salsa Bar</h3><p>12:00 PM – 5:00 PM · Chef Sofia</p><div class="ws-card-foot"><span class="ws-price-sm">₹4,799</span><span class="ws-left">9 left</span><a href="#reserve" class="btn btn-primary btn-sm" data-pick="tacos">Reserve</a></div></div>
+          </article>
+          <article class="ws-card" data-m="dec" data-ws="up" style="--stagger:2">
+            <div class="ws-card-img"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80" alt="Scoops of ice cream" loading="lazy" data-fallback="gelato" /></div>
+            <div class="ws-card-date"><b>19</b><span>Dec<br />Sat</span></div>
+            <div class="ws-card-body"><h3>Gelato &amp; Frozen Desserts Lab</h3><p>11:00 AM – 4:00 PM · Chef Camille</p><div class="ws-card-foot"><span class="ws-price-sm">₹4,999</span><span class="ws-left">12 left</span><a href="#reserve" class="btn btn-primary btn-sm" data-pick="gelato">Reserve</a></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. A DAY AT A WORKSHOP — drag-scroll track ================= -->
+    <section class="ws-section ws-day" id="day">
+      <div class="container">
+        <div class="day-head" data-ws="up">
+          <div>
+            <span class="tagline">A Day With Us</span>
+            <h2 class="ws-title">How a workshop unfolds</h2>
+          </div>
+          <div class="day-nav">
+            <button class="day-arrow" id="dayPrev" type="button" aria-label="Scroll back">←</button>
+            <button class="day-arrow" id="dayNext" type="button" aria-label="Scroll forward">→</button>
+          </div>
+        </div>
+      </div>
+      <div class="day-track" id="dayTrack" tabindex="0" aria-label="Workshop day, scroll sideways">
+        <article class="day-card" data-ws="up" style="--stagger:0">
+          <figure><img src="https://images.unsplash.com/photo-1505935428862-770b6f24f629?auto=format&fit=crop&w=800&q=80" alt="Ingredients laid out on a table" loading="lazy" data-fallback="ingredients,flatlay" /></figure>
+          <span class="day-step">Morning · 01</span><h3>Market &amp; mise en place</h3><p>Taste the produce, learn what's in season and set up your station like a pro.</p>
+        </article>
+        <article class="day-card" data-ws="up" style="--stagger:1">
+          <figure><img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=800&q=80" alt="Baking ingredients being prepared" loading="lazy" data-fallback="baking,prep" /></figure>
+          <span class="day-step">Late morning · 02</span><h3>Technique deep-dive</h3><p>The chef demonstrates each technique slowly, then you repeat it at your counter.</p>
+        </article>
+        <article class="day-card" data-ws="up" style="--stagger:2">
+          <figure><img src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?auto=format&fit=crop&w=800&q=80" alt="Food cooking in a pan" loading="lazy" data-fallback="cooking,pan" /></figure>
+          <span class="day-step">Afternoon · 03</span><h3>Cook the full menu</h3><p>Three to four dishes, cooked in pairs, with the chef coaching every step.</p>
+        </article>
+        <article class="day-card" data-ws="up" style="--stagger:3">
+          <figure><img src="https://images.unsplash.com/photo-1484980972926-edee96e0960d?auto=format&fit=crop&w=800&q=80" alt="Overhead view of a shared meal" loading="lazy" data-fallback="shared,meal" /></figure>
+          <span class="day-step">Late afternoon · 04</span><h3>Long-table lunch</h3><p>Everyone sits down together to eat, toast and swap stories — then pack up leftovers.</p>
+        </article>
+      </div>
+      <div class="container"><div class="day-progress" aria-hidden="true"><i id="dayBar"></i></div></div>
+    </section>
+
+    <!-- ================= 5. WORKSHOP FORMATS ================= -->
+    <section class="ws-section ws-formats" id="formats">
+      <div class="container">
+        <div class="ws-head" data-ws="up">
+          <span class="tagline">Workshop Formats</span>
+          <h2 class="ws-title">Pick the weekend that suits you</h2>
+        </div>
+        <div class="format-grid">
+          <article class="format" data-ws="up" style="--stagger:0">
+            <img src="https://images.unsplash.com/photo-1495214783159-3503fd1b572d?auto=format&fit=crop&w=800&q=80" alt="Chef-prepared dish" loading="lazy" data-fallback="masterclass,food" />
+            <div class="format-body"><span class="format-num">01</span><h3>Masterclass</h3><p>One cuisine, one chef, six hours of serious technique for keen cooks.</p></div>
+          </article>
+          <article class="format" data-ws="up" style="--stagger:1">
+            <img src="https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?auto=format&fit=crop&w=800&q=80" alt="Brunch for two" loading="lazy" data-fallback="brunch,couple" />
+            <div class="format-body"><span class="format-num">02</span><h3>Couples' Kitchen</h3><p>Cook side by side at a shared station — the most delicious date idea in town.</p></div>
+          </article>
+          <article class="format" data-ws="up" style="--stagger:2">
+            <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=800&q=80" alt="Bowl of fresh fruit" loading="lazy" data-fallback="fruit,family" />
+            <div class="format-body"><span class="format-num">03</span><h3>Family Weekend</h3><p>Kid-friendly menus for ages 7+, with jobs for every pair of little hands.</p></div>
+          </article>
+          <article class="format" data-ws="up" style="--stagger:3">
+            <img src="https://images.unsplash.com/photo-1452195100486-9cc805987862?auto=format&fit=crop&w=800&q=80" alt="Cheese and charcuterie board" loading="lazy" data-fallback="cheese,board" />
+            <div class="format-body"><span class="format-num">04</span><h3>Chef's Table Sunday</h3><p>Cook a tasting menu with the chef, then enjoy it course by course.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. GUEST HOSTS ================= -->
+    <section class="ws-section ws-hosts" id="hosts">
+      <div class="container">
+        <div class="ws-head" data-ws="up">
+          <span class="tagline">Guest Hosts</span>
+          <h2 class="ws-title">Visiting chefs this season</h2>
+          <p class="ws-text">Each month we invite a guest chef to host a special weekend alongside our resident team.</p>
+        </div>
+        <div class="host-grid">
+          <article class="host" data-ws="up" style="--stagger:0">
+            <figure class="host-img"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80" alt="Portrait of Chef Leena Thomas" loading="lazy" data-fallback="woman,chef" /></figure>
+            <div class="host-card">
+              <h3>Chef Leena Thomas</h3><span>Kerala coastal cooking · Kochi</span>
+              <p class="host-more">Hosting a seafood and coconut weekend on 12 December.</p>
+            </div>
+          </article>
+          <article class="host" data-ws="up" style="--stagger:1">
+            <figure class="host-img"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Portrait of Chef Marco Bellini" loading="lazy" data-fallback="man,chef" /></figure>
+            <div class="host-card">
+              <h3>Chef Marco Bellini</h3><span>Pizza &amp; bread · Naples</span>
+              <p class="host-more">Co-hosting the Neapolitan Pizza Masterclass on 21 November.</p>
+            </div>
+          </article>
+          <article class="host" data-ws="up" style="--stagger:2">
+            <figure class="host-img"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80" alt="Portrait of Chef Yuki Tanaka" loading="lazy" data-fallback="woman,portrait" /></figure>
+            <div class="host-card">
+              <h3>Chef Yuki Tanaka</h3><span>Wagashi &amp; Japanese sweets · Kyoto</span>
+              <p class="host-more">Leading a Japanese sweets weekend in January.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. REVIEWS OVER IMAGE ================= -->
+    <section class="ws-reviews" id="reviews">
+      <img class="reviews-bg" src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" loading="lazy" data-fallback="restaurant,evening" />
+      <div class="reviews-overlay" aria-hidden="true"></div>
+      <div class="container reviews-inner">
+        <div class="reviews-stats" data-ws="left">
+          <span class="tagline tagline-light">Guest Love</span>
+          <h2 class="ws-title">Weekends people remember</h2>
+          <div class="r-stats">
+            <div><strong class="ws-count" data-to="4.9" data-dec="1">0</strong><span>Average rating</span></div>
+            <div><strong class="ws-count" data-to="3200" data-suffix="+">0</strong><span>Workshop guests</span></div>
+            <div><strong class="ws-count" data-to="92" data-suffix="%">0</strong><span>Come back again</span></div>
+          </div>
+        </div>
+        <div class="quotes" data-ws="right">
+          <div class="quote-stack" id="quoteStack">
+            <blockquote class="wq is-on"><p>"The pizza masterclass was worth every rupee. I finally understand dough — and my family is very happy about it."</p><cite>Arvind P. · Pizza Masterclass</cite></blockquote>
+            <blockquote class="wq"><p>"We did the Couples' Kitchen for our anniversary. Six hours flew by and lunch was the best meal of the year."</p><cite>Nisha &amp; Rahul · Couples' Kitchen</cite></blockquote>
+            <blockquote class="wq"><p>"My kids still talk about the Family Weekend. They now insist on making Sunday pancakes themselves."</p><cite>Fatima S. · Family Weekend</cite></blockquote>
+          </div>
+          <div class="quote-dots" id="quoteDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 8. RESERVE ================= -->
+    <section class="ws-section ws-reserve" id="reserve">
+      <div class="container reserve-grid">
+        <figure class="reserve-img" data-ws="left">
+          <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Warm restaurant interior with long tables" loading="lazy" data-fallback="long,table" />
+          <figcaption>
+            <strong>What's included</strong>
+            <ul><li>Welcome drink &amp; tasting plate</li><li>All ingredients &amp; equipment</li><li>Long-table lunch</li><li>Apron &amp; recipe booklet</li></ul>
+          </figcaption>
+        </figure>
+
+        <div class="reserve-panel" data-ws="right">
+          <span class="tagline">Reserve Your Spot</span>
+          <h2 class="ws-title">Book a weekend workshop</h2>
+          <form class="reserve-form" id="reserveForm" novalidate>
+            <label class="r-field">
+              <span>Workshop</span>
+              <select id="rWorkshop" required>
+                <option value="" disabled selected>Choose a workshop</option>
+                <option value="pizza" data-price="5499">21 Nov · Neapolitan Pizza Masterclass — ₹5,499</option>
+                <option value="desserts" data-price="5999">22 Nov · Plated Desserts &amp; Patisserie — ₹5,999</option>
+                <option value="brunch" data-price="4499">28 Nov · Farm-to-Table Brunch Bowls — ₹4,499</option>
+                <option value="pasta" data-price="5299">05 Dec · Fresh Pasta Feast — ₹5,299</option>
+                <option value="tacos" data-price="4799">13 Dec · Taco Fiesta &amp; Salsa Bar — ₹4,799</option>
+                <option value="gelato" data-price="4999">19 Dec · Gelato &amp; Frozen Desserts Lab — ₹4,999</option>
+              </select>
+            </label>
+            <div class="r-row">
+              <div class="r-field">
+                <span>Guests</span>
+                <div class="stepper">
+                  <button type="button" id="gMinus" aria-label="Fewer guests">−</button>
+                  <output id="gCount" aria-live="polite">1</output>
+                  <button type="button" id="gPlus" aria-label="More guests">+</button>
+                </div>
+              </div>
+              <label class="r-check"><input type="checkbox" id="rKit" /><span class="check-box" aria-hidden="true"></span><span>Take-home kit <small>+₹499 / guest</small></span></label>
+            </div>
+            <label class="r-field"><span>Full name</span><input type="text" id="rName" required autocomplete="name" /></label>
+            <label class="r-field"><span>Email</span><input type="email" id="rEmail" required autocomplete="email" /></label>
+            <div class="r-total">
+              <span>Total</span>
+              <strong>₹<span id="rTotal">0</span></strong>
+            </div>
+            <button class="btn btn-primary" type="submit">Confirm Reservation</button>
+            <p class="r-note" id="rNote" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA — Gift card (pattern: zigzag) ================= -->
+    <section class="ws-cta" id="gift">
+      <svg class="ws-cta-pattern" aria-hidden="true" focusable="false"><defs><pattern id="ptZigzag" width="40" height="20" patternUnits="userSpaceOnUse"><path d="M0 15 L10 5 L20 15 L30 5 L40 15" fill="none" stroke="currentColor" stroke-width="2" /></pattern></defs><rect width="100%" height="100%" fill="url(#ptZigzag)" /></svg>
+      <div class="container gift-grid">
+        <div class="gift-copy" data-ws="left">
+          <span class="tagline">Gift a Weekend</span>
+          <h2 class="ws-title">Give a workshop they'll never forget</h2>
+          <p class="ws-text">Choose an amount, add their name and we'll email a beautiful gift card — valid for 12 months on any class or workshop.</p>
+          <div class="amount-chips" role="group" aria-label="Gift amount">
+            <button class="amount" type="button" data-amt="2,500">₹2,500</button>
+            <button class="amount is-on" type="button" data-amt="5,000">₹5,000</button>
+            <button class="amount" type="button" data-amt="10,000">₹10,000</button>
+          </div>
+          <label class="gift-name"><span>Recipient's name</span><input type="text" id="giftName" maxlength="24" placeholder="e.g. Priya" /></label>
+          <div class="gift-actions">
+            <a href="#" class="btn btn-primary">Buy Gift Card</a>
+            <button class="btn btn-secondary" type="button" id="flipCard">Flip the Card</button>
+          </div>
+        </div>
+        <div class="gift-stage" data-ws="right">
+          <div class="gift-card" id="giftCard" tabindex="0" aria-label="Gift card preview, press to flip">
+            <div class="gift-face gift-front">
+              <img src="https://images.unsplash.com/photo-1565895405138-6c3a1555da6a?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy" data-fallback="gift,food" />
+              <div class="gift-front-body">
+                <span class="gift-brand">Culina Studio</span>
+                <span class="gift-label">Gift Card</span>
+                <strong class="gift-amt">₹<span id="giftAmt">5,000</span></strong>
+              </div>
+            </div>
+            <div class="gift-face gift-back">
+              <span class="gift-label">A gift for</span>
+              <strong class="gift-to" id="giftTo">Someone special</strong>
+              <p>Good for any class or weekend workshop at Culina Studio.</p>
+              <span class="gift-code">CS-GIFT-2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="Culina Studio home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">
+            <span class="brand-name">Culina Studio</span>
+            <span class="brand-tagline">Explore • Cook • Master</span>
+          </span>
+        </a>
+        <p>A hands-on cooking school and culinary studio where every student cooks, tastes and learns from working chefs.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M11 8.5c3-1 5 .5 5 3 0 2.5-1.8 4-3.5 4-1.2 0-2-.8-2-.8L9 21"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Students</h4>
+        <ul>
+          <li><a href="login.html">Student Login</a></li>
+          <li><a href="user-dashboard.html#book">Book a Seat</a></li>
+          <li><a href="user-dashboard.html#saved">Recipe Library</a></li>
+          <li><a href="user-dashboard.html#orders">Payments</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <ul class="contact-list">
+          <li><b>Studio:</b> 12 Spice Lane, Banjara Hills, Hyderabad</li>
+          <li><b>Call:</b> <a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><b>Email:</b> <a href="mailto:hello@culinastudio.com">hello@culinastudio.com</a></li>
+          <li><b>Hours:</b> Tue – Sun · 9 AM – 9 PM</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Culina Studio. All rights reserved.</p>
+      <div class="legal">
+        <a href="#">Privacy Policy</a>
+        <span aria-hidden="true">•</span>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
+
+  <script src="workshops.js" defer></script>
+</body>
+</html>

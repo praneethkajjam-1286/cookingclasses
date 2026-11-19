@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Culina Studio | Explore • Cook • Master</title>
+  <meta name="description" content="Contact Culina Studio in Banjara Hills, Hyderabad — call, WhatsApp, email or visit. Send an enquiry for classes, private events and corporate cook-offs." />
+
+  <!-- Apply saved theme + direction before paint (prevents flash) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('culina-theme');
+        var d = localStorage.getItem('culina-dir');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        if (d === 'rtl' || d === 'ltr') document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="icon" type="image/png" href="logo-light.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body class="contact-page">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Culina Studio home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-name">Culina Studio</span>
+          <span class="brand-tagline">Explore • Cook • Master</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li class="has-dd">
+            <div class="dd-wrap">
+              <a href="index.html" class="nav-link">Home</a>
+              <button class="dd-toggle" type="button" aria-expanded="false" aria-controls="ddHome" aria-label="Show home page options"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </div>
+            <ul class="dd-menu" id="ddHome">
+              <li><a href="index.html" class="dd-link"><span class="dd-num">01</span><span class="dd-txt"><strong>Home 1</strong><small>Classic studio home</small></span></a></li>
+              <li><a href="home2.html" class="dd-link"><span class="dd-num">02</span><span class="dd-txt"><strong>Home 2</strong><small>Alternate home layout</small></span></a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="service.html" class="nav-link">Services</a></li>
+          <li><a href="classes.html" class="nav-link">Classes</a></li>
+          <li><a href="workshops.html" class="nav-link">Workshops</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+          <li><a href="user-dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn dir-btn" id="dirToggle" type="button" aria-label="Toggle right-to-left layout" aria-pressed="false">
+          <span class="dir-label" aria-hidden="true">↔</span>
+        </button>
+        <a href="login.html" class="btn btn-primary header-cta magnetic">Login</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <main id="main">
+
+    <!-- ================= 1. HERO — line-drawn city map + postcard + live studio status ================= -->
+    <section class="ct-hero" id="top">
+      <svg class="ct-map" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g class="ct-roads">
+          <path d="M-20 640 C 220 600, 380 700, 620 640 S 1000 520, 1460 600" />
+          <path d="M-20 260 C 260 300, 420 200, 700 250 S 1100 360, 1460 300" />
+          <path d="M180 -20 C 220 200, 140 420, 260 620 S 300 860, 280 920" />
+          <path d="M760 -20 C 720 180, 820 360, 780 520 S 700 760, 760 920" />
+          <path d="M1180 -20 C 1140 240, 1260 420, 1200 640 S 1240 820, 1220 920" />
+          <path class="minor" d="M-20 440 L 1460 470" />
+          <path class="minor" d="M460 -20 L 520 920" />
+          <path class="minor" d="M980 -20 L 1010 920" />
+          <path class="minor" d="M-20 790 C 400 760, 900 830, 1460 780" />
+          <path class="minor" d="M-20 110 C 500 140, 900 80, 1460 130" />
+          <path class="lake" d="M1010 640 c 60 -50 170 -40 200 20 s -40 120 -120 110 s -130 -70 -80 -130z" />
+        </g>
+        <path class="ct-route" d="M-20 860 C 300 885, 600 840, 700 720 S 770 320, 790 214" />
+        <g class="ct-pin" transform="translate(790 214)">
+          <ellipse class="pin-pulse" cx="0" cy="0" rx="18" ry="6" />
+          <g class="pin-drop"><path class="pin-body" d="M0 0 C -4 -10, -14 -16, -14 -28 A14 14 0 1 1 14 -28 C 14 -16, 4 -10, 0 0 Z" /><circle class="pin-hole" cx="0" cy="-28" r="5.5" /></g>
+        </g>
+      </svg>
+
+      <div class="container ct-hero-grid">
+        <div class="ct-hero-copy">
+          <span class="tagline">Contact Culina Studio</span>
+          <h1 class="ct-title">
+            <span class="ct-title-line">Let's talk about</span>
+            <span class="ct-rotator" aria-live="polite"><span class="ct-word" id="ctWord">your next class</span><span class="ct-caret" aria-hidden="true"></span></span>
+          </h1>
+          <p class="ct-lead">Questions about a class, a private dinner or a team cook-off? Write, call or drop by the kitchen — a real person replies within a few hours.</p>
+          <div class="btn-row">
+            <a href="#enquiry" class="btn btn-primary">Send a Message</a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Banjara+Hills+Hyderabad" target="_blank" rel="noopener" class="btn btn-secondary">Get Directions</a>
+          </div>
+          <ul class="ct-quick">
+            <li><span class="ct-quick-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><a href="tel:+919876543210">+91 98765 43210</a><button type="button" class="copy" data-copy="+91 98765 43210" aria-label="Copy phone number">Copy</button></li>
+            <li><span class="ct-quick-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><a href="mailto:hello@culinastudio.com">hello@culinastudio.com</a><button type="button" class="copy" data-copy="hello@culinastudio.com" aria-label="Copy email address">Copy</button></li>
+          </ul>
+        </div>
+
+        <div class="ct-postcard-wrap">
+          <figure class="ct-postcard">
+            <div class="ct-stamp"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80" alt="Warm dining room of the studio set for an evening class" data-fallback="restaurant,interior" /></div>
+            <figcaption>
+              <span class="ct-pc-label">Greetings from</span>
+              <strong>Banjara Hills, Hyderabad</strong>
+              <span class="ct-pc-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+            </figcaption>
+            <svg class="ct-postmark" viewBox="0 0 120 120" aria-hidden="true">
+              <defs><path id="pmCircle" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0"/></defs>
+              <circle cx="60" cy="60" r="56" /><circle cx="60" cy="60" r="32" />
+              <text><textPath href="#pmCircle">CULINA STUDIO · HYDERABAD · EST. 2019 ·</textPath></text>
+              <text x="60" y="66" text-anchor="middle" class="pm-mid">CS</text>
+            </svg>
+          </figure>
+          <div class="ct-live" id="liveCard">
+            <span class="ct-live-dot" aria-hidden="true"></span>
+            <div><strong id="liveStatus">Checking hours…</strong><small id="liveSub">Studio time (IST)</small></div>
+            <time class="ct-clock" id="liveClock">--:--</time>
+          </div>
+        </div>
+      </div>
+      <a href="#channels" class="ct-scroll" aria-label="Scroll to ways to reach us"><span></span></a>
+    </section>
+
+    <!-- ================= 2. WAYS TO REACH US ================= -->
+    <section class="section ct-channels" id="channels">
+      <div class="container">
+        <div class="section-head" data-ct>
+          <span class="tagline">Ways to reach us</span>
+          <h2 class="section-title">Pick the line that suits you</h2>
+          <p class="section-text">Every channel reaches the same small studio team — choose whichever is easiest.</p>
+        </div>
+        <div class="ch-grid">
+          <article class="ch-card" data-ct>
+            <figure class="ch-img"><img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80" alt="Bowl of rich Indian curry" loading="lazy" data-fallback="curry" /></figure>
+            <span class="ch-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+            <div class="ch-body">
+              <h3>Call the studio</h3>
+              <p>Quickest for same-week bookings and seat checks.</p>
+              <span class="ch-meta">Tue – Sun · 9 AM – 9 PM</span>
+              <a href="tel:+919876543210" class="text-link">+91 98765 43210 <span class="arrow">→</span></a>
+            </div>
+          </article>
+          <article class="ch-card" data-ct style="--d:.1s">
+            <figure class="ch-img"><img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80" alt="Steamed dumplings in a bamboo basket" loading="lazy" data-fallback="dumplings" /></figure>
+            <span class="ch-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.4-4A8 8 0 1 1 8 18.6z"/><path d="M9 10c.5 2 2 3.5 4 4l1.2-1.2 2 .8-.6 1.6c-3.4 0-6.8-3.4-6.8-6.8l1.6-.6.8 2z"/></svg></span>
+            <div class="ch-body">
+              <h3>WhatsApp us</h3>
+              <p>Send photos, menus or questions — we reply in the chat.</p>
+              <span class="ch-meta">Replies within 1 hour</span>
+              <a href="https://wa.me/919876543210?text=Hi%20Culina%20Studio!" target="_blank" rel="noopener" class="text-link">Start a chat <span class="arrow">→</span></a>
+            </div>
+          </article>
+          <article class="ch-card" data-ct style="--d:.2s">
+            <figure class="ch-img"><img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" alt="Fresh colourful salad on a plate" loading="lazy" data-fallback="salad" /></figure>
+            <span class="ch-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <div class="ch-body">
+              <h3>Email the team</h3>
+              <p>Best for private events, corporate sessions and invoices.</p>
+              <span class="ch-meta">Replies within 4 hours</span>
+              <a href="mailto:hello@culinastudio.com" class="text-link">hello@culinastudio.com <span class="arrow">→</span></a>
+            </div>
+          </article>
+          <article class="ch-card" data-ct style="--d:.3s">
+            <figure class="ch-img"><img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?auto=format&fit=crop&w=800&q=80" alt="Healthy grain bowl with vegetables" loading="lazy" data-fallback="vegetables,bowl" /></figure>
+            <span class="ch-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+            <div class="ch-body">
+              <h3>Visit the kitchen</h3>
+              <p>Walk in for a tour — classes run most evenings.</p>
+              <span class="ch-meta">12 Spice Lane, Banjara Hills</span>
+              <a href="#visit" class="text-link">See map &amp; hours <span class="arrow">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. ENQUIRY FORM ================= -->
+    <section class="section ct-form-sec" id="enquiry">
+      <div class="container form-grid">
+        <aside class="form-side" data-ct>
+          <figure class="form-img"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="Cup of coffee on a wooden table" loading="lazy" data-fallback="coffee,cup" />
+            <figcaption><b>&lt; 4 h</b><span>average reply time</span></figcaption></figure>
+          <h3>What happens next</h3>
+          <ol class="next-steps">
+            <li><span>1</span><div><strong>We read it</strong><small>Your message lands with the right person on the team.</small></div></li>
+            <li><span>2</span><div><strong>We reply</strong><small>By email, phone or WhatsApp — the way you choose.</small></div></li>
+            <li><span>3</span><div><strong>We plan it together</strong><small>Dates, menus and seats confirmed in one go.</small></div></li>
+          </ol>
+        </aside>
+
+        <div class="form-card" data-ct style="--d:.1s">
+          <div class="form-head">
+            <span class="tagline">Send a message</span>
+            <h2 class="section-title">Tell us what you're planning</h2>
+            <p class="form-draft" id="draftNote" hidden>We restored your unsent draft. <button type="button" class="link-btn" id="clearDraft">Start fresh</button></p>
+          </div>
+
+          <form id="enquiryForm" novalidate>
+            <fieldset class="topics">
+              <legend class="f-label">What's it about?</legend>
+              <div class="topic-row">
+                <label class="topic"><input type="radio" name="topic" value="Class booking" checked /><span>Class booking</span></label>
+                <label class="topic"><input type="radio" name="topic" value="Private event" /><span>Private event</span></label>
+                <label class="topic"><input type="radio" name="topic" value="Corporate team" /><span>Corporate team</span></label>
+                <label class="topic"><input type="radio" name="topic" value="Gift card" /><span>Gift card</span></label>
+                <label class="topic"><input type="radio" name="topic" value="Something else" /><span>Something else</span></label>
+              </div>
+            </fieldset>
+
+            <div class="f-grid">
+              <label class="f-field"><span class="f-label">Your name</span><input class="f-input" name="name" autocomplete="name" placeholder="Priya Sharma" maxlength="50" /><small class="f-err"></small></label>
+              <label class="f-field"><span class="f-label">Email</span><input class="f-input" name="email" type="email" autocomplete="email" placeholder="you@example.com" /><small class="f-err"></small></label>
+              <label class="f-field"><span class="f-label">Phone <em>(optional)</em></span><input class="f-input" name="phone" type="tel" autocomplete="tel" placeholder="+91 98480 12345" /><small class="f-err"></small></label>
+              <label class="f-field"><span class="f-label">Preferred date</span><input class="f-input" name="date" type="date" /><small class="f-hint" id="dateHint"></small><small class="f-err"></small></label>
+              <div class="f-field guests-field" id="guestsField">
+                <span class="f-label" id="guestsLabel">Number of people</span>
+                <div class="stepper" role="group" aria-labelledby="guestsLabel">
+                  <button type="button" data-step="-1" aria-label="Fewer people">−</button>
+                  <input name="guests" type="number" min="1" max="60" value="2" aria-labelledby="guestsLabel" />
+                  <button type="button" data-step="1" aria-label="More people">+</button>
+                </div>
+                <small class="f-hint" id="guestsHint">Classes seat up to 12 per session.</small>
+              </div>
+              <fieldset class="f-field reply-field">
+                <legend class="f-label">Reply to me by</legend>
+                <div class="seg">
+                  <label><input type="radio" name="via" value="Email" checked /><span>Email</span></label>
+                  <label><input type="radio" name="via" value="Phone" /><span>Phone</span></label>
+                  <label><input type="radio" name="via" value="WhatsApp" /><span>WhatsApp</span></label>
+                </div>
+              </fieldset>
+              <label class="f-field span-2"><span class="f-label">Message <small class="count" id="msgCount">0 / 600</small></span><textarea class="f-input" name="message" rows="5" maxlength="600" placeholder="Tell us about the occasion, dietary needs or anything else…"></textarea><small class="f-err"></small></label>
+            </div>
+            <label class="hp" aria-hidden="true">Leave this empty <input name="website" tabindex="-1" autocomplete="off" /></label>
+            <label class="consent"><input type="checkbox" name="consent" /><span class="box" aria-hidden="true"></span><span>It's okay to contact me about this enquiry. See our <a href="#">Privacy Policy</a>.</span></label>
+            <small class="f-err" id="consentErr"></small>
+            <button type="submit" class="btn btn-primary submit-btn" id="sendBtn"><span class="lbl">Send Message</span><svg class="plane" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></button>
+          </form>
+
+          <div class="sent-panel" id="sentPanel" hidden tabindex="-1">
+            <svg class="sent-check" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-15"/></svg>
+            <h3>Message sent — thank you, <span id="sentName"></span>!</h3>
+            <p>Your reference is <b id="sentRef"></b>. We'll reply by <b id="sentVia"></b> within a few hours.</p>
+            <dl class="sent-sum" id="sentSum"></dl>
+            <button type="button" class="btn btn-secondary btn-sm" id="newMsg">Send Another Message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. VISIT — map, hours, getting here ================= -->
+    <section class="section ct-visit" id="visit">
+      <div class="container">
+        <div class="section-head" data-ct>
+          <span class="tagline">Visit the studio</span>
+          <h2 class="section-title">Find your way to the kitchen</h2>
+        </div>
+        <div class="visit-grid">
+          <div class="map-card" data-ct>
+            <iframe title="Map showing Culina Studio in Banjara Hills, Hyderabad" src="https://www.openstreetmap.org/export/embed.html?bbox=78.4340%2C17.4040%2C78.4630%2C17.4230&amp;layer=mapnik&amp;marker=17.4135%2C78.4485" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-addr">
+              <div><small>Address</small><strong>12 Spice Lane, Banjara Hills, Hyderabad 500034</strong></div>
+              <div class="map-acts"><button type="button" class="btn btn-secondary btn-sm" data-copy="12 Spice Lane, Banjara Hills, Hyderabad 500034">Copy Address</button><a class="btn btn-primary btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=Banjara+Hills+Hyderabad" target="_blank" rel="noopener">Directions</a></div>
+            </div>
+          </div>
+          <div class="visit-side">
+            <div class="hours-card" data-ct style="--d:.1s">
+              <div class="hours-head"><h3>Opening hours</h3><span class="status-pill" id="hoursPill">—</span></div>
+              <ul class="hours" id="hoursList">
+                <li data-day="1"><span>Monday</span><span>Closed</span></li>
+                <li data-day="2"><span>Tuesday</span><span>9 AM – 9 PM</span></li>
+                <li data-day="3"><span>Wednesday</span><span>9 AM – 9 PM</span></li>
+                <li data-day="4"><span>Thursday</span><span>9 AM – 9 PM</span></li>
+                <li data-day="5"><span>Friday</span><span>9 AM – 9 PM</span></li>
+                <li data-day="6"><span>Saturday</span><span>9 AM – 9 PM</span></li>
+                <li data-day="0"><span>Sunday</span><span>9 AM – 9 PM</span></li>
+              </ul>
+            </div>
+            <figure class="visit-img" data-ct style="--d:.2s"><img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?auto=format&fit=crop&w=900&q=80" alt="Bright café-style seating area by the studio kitchen" loading="lazy" data-fallback="cafe,interior" /></figure>
+          </div>
+        </div>
+        <ul class="getting-here">
+          <li data-ct><span class="gh-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M8 21l2-4M16 21l-2-4"/><circle cx="9" cy="14" r=".6"/><circle cx="15" cy="14" r=".6"/></svg></span><div><strong>Metro</strong><small>Punjagutta station · 10 min by auto</small></div></li>
+          <li data-ct style="--d:.1s"><span class="gh-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg></span><div><strong>Parking</strong><small>Free basement parking for students</small></div></li>
+          <li data-ct style="--d:.2s"><span class="gh-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></span><div><strong>Accessible</strong><small>Step-free entry and lift to the kitchen</small></div></li>
+          <li data-ct style="--d:.3s"><span class="gh-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="4"/></svg></span><div><strong>Arrive early</strong><small>Doors open 15 minutes before class</small></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= 5. THE TEAM WHO REPLIES ================= -->
+    <section class="section ct-team" id="team">
+      <div class="container">
+        <div class="section-head" data-ct>
+          <span class="tagline">Real people, quick replies</span>
+          <h2 class="section-title">Who you'll be talking to</h2>
+        </div>
+        <div class="team-grid">
+          <article class="person" data-ct>
+            <figure><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=700&q=80" alt="Portrait of Ananya, studio manager" loading="lazy" data-fallback="woman,portrait" />
+              <blockquote>"Tell me the occasion — I'll find the right class and the right seats."</blockquote></figure>
+            <div class="person-body"><h3>Ananya Rao</h3><span class="role">Studio Manager</span><small>Bookings · seats · refunds</small><small>Speaks English, Telugu, Hindi</small>
+              <a href="mailto:ananya@culinastudio.com" class="text-link">Email Ananya <span class="arrow">→</span></a></div>
+          </article>
+          <article class="person" data-ct style="--d:.12s">
+            <figure><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Portrait of Rohit, events lead" loading="lazy" data-fallback="man,portrait" />
+              <blockquote>"Birthdays, off-sites, proposals — I've planned them all in this kitchen."</blockquote></figure>
+            <div class="person-body"><h3>Rohit Menon</h3><span class="role">Events &amp; Corporate</span><small>Private dinners · team cook-offs</small><small>Speaks English, Malayalam, Hindi</small>
+              <a href="mailto:events@culinastudio.com" class="text-link">Email Rohit <span class="arrow">→</span></a></div>
+          </article>
+          <article class="person" data-ct style="--d:.24s">
+            <figure><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80" alt="Portrait of Farah, student support" loading="lazy" data-fallback="woman,smiling" />
+              <blockquote>"Stuck on a recipe after class? Send me a photo and I'll help."</blockquote></figure>
+            <div class="person-body"><h3>Farah Siddiqui</h3><span class="role">Student Support</span><small>Dashboard · recipes · gift cards</small><small>Speaks English, Urdu, Hindi</small>
+              <a href="mailto:support@culinastudio.com" class="text-link">Email Farah <span class="arrow">→</span></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. QUICK ANSWERS — searchable FAQ ================= -->
+    <section class="section ct-faq" id="faq">
+      <div class="container faq-grid">
+        <div>
+          <div class="section-head faq-head" data-ct>
+            <span class="tagline">Quick answers</span>
+            <h2 class="section-title">Maybe we've answered it already</h2>
+          </div>
+          <div class="faq-tools" data-ct>
+            <label class="faq-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span class="sr-only">Search questions</span><input type="search" id="faqSearch" placeholder="Search questions — e.g. refund, parking" /></label>
+            <div class="faq-tabs" role="tablist" aria-label="Question topics">
+              <button type="button" role="tab" class="faq-tab is-on" aria-selected="true" data-cat="all">All</button>
+              <button type="button" role="tab" class="faq-tab" aria-selected="false" data-cat="booking">Booking</button>
+              <button type="button" role="tab" class="faq-tab" aria-selected="false" data-cat="events">Events</button>
+              <button type="button" role="tab" class="faq-tab" aria-selected="false" data-cat="visit">Visiting</button>
+            </div>
+          </div>
+          <div class="faq" id="faqList">
+            <div class="faq-item" data-cat="booking"><button class="faq-q" type="button" aria-expanded="false">Can I cancel or move my booking?<span class="faq-ico" aria-hidden="true"></span></button><div class="faq-a"><p>Yes — up to 48 hours before the class you get a full refund or a free move to another date. Inside 48 hours we add studio credit instead.</p></div></div>
+            <div class="faq-item" data-cat="booking"><button class="faq-q" type="button" aria-expanded="false">Do I need any cooking experience?<span class="faq-ico" aria-hidden="true"></span></button><div class="faq-a"><p>Not at all. Beginner classes start from knife skills. Each class page shows its level so you can choose comfortably.</p></div></div>
+            <div class="faq-item" data-cat="events"><button class="faq-q" type="button" aria-expanded="false">How many people can a private event hold?<span class="faq-ico" aria-hidden="true"></span></button><div class="faq-a"><p>Hands-on events seat up to 24 cooks; a chef's-table dinner seats up to 40 guests. Tell us the date and we'll hold it for 48 hours.</p></div></div>
+            <div class="faq-item" data-cat="events"><button class="faq-q" type="button" aria-expanded="false">Do you send invoices for corporate teams?<span class="faq-ico" aria-hidden="true"></span></button><div class="faq-a"><p>Yes — GST invoices with your company details, and we can split payments across departments.</p></div></div>
+            <div class="faq-item" data-cat="visit"><button class="faq-q" type="button" aria-expanded="false">Is there parking at the studio?<span class="faq-ico" aria-hidden="true"></span></button><div class="faq-a"><p>Free basement parking for students and guests. Two-wheeler parking is beside the entrance.</p></div></div>
+            <div class="faq-item" data-cat="visit"><button class="faq-q" type="button" aria-expanded="false">Can I visit without a booking?<span class="faq-ico" aria-hidden="true"></span></button><div class="faq-a"><p>Of course. Drop in Tuesday to Sunday for a quick tour — evenings are busiest, so mornings are best for a chat.</p></div></div>
+          </div>
+          <div class="faq-empty" id="faqEmpty" hidden>
+            <p>No answer for "<b id="faqTerm"></b>" yet.</p>
+            <a href="#enquiry" class="btn btn-primary btn-sm" id="askThis">Ask Us Directly</a>
+          </div>
+        </div>
+        <figure class="faq-img" data-ct style="--d:.15s">
+          <img src="https://images.unsplash.com/photo-1498579150354-977475b7ea0b?auto=format&fit=crop&w=900&q=80" alt="Breakfast table with fresh fruit and pastries" loading="lazy" data-fallback="breakfast" />
+          <figcaption>
+            <strong>Still curious?</strong>
+            <span>Call us — we love talking food.</span>
+            <a href="tel:+919876543210" class="btn btn-on-image btn-sm">Call Now</a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= 7. FOLLOW THE KITCHEN — social grid ================= -->
+    <section class="section ct-social" id="social">
+      <div class="container">
+        <div class="social-head" data-ct>
+          <div>
+            <span class="tagline">Follow the kitchen</span>
+            <h2 class="section-title">@culinastudio</h2>
+          </div>
+          <a href="#" class="btn btn-secondary">Follow on Instagram</a>
+        </div>
+        <div class="social-grid">
+          <a href="#" class="post post-tall" data-ct><img src="https://images.unsplash.com/photo-1557872943-16a5ac26437e?auto=format&fit=crop&w=800&q=80" alt="Bowl of ramen with egg and greens" loading="lazy" data-fallback="ramen" /><span class="post-ov"><b>♥ 1.2k</b><small>Ramen night, sold out in 3 hours</small></span></a>
+          <a href="#" class="post" data-ct style="--d:.08s"><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=700&q=80" alt="Stacked burger with fries" loading="lazy" data-fallback="burger" /><span class="post-ov"><b>♥ 864</b><small>Smash-burger Saturday</small></span></a>
+          <a href="#" class="post" data-ct style="--d:.16s"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80" alt="Cosy café seating with plants" loading="lazy" data-fallback="cafe" /><span class="post-ov"><b>♥ 702</b><small>Our new tasting corner</small></span></a>
+          <a href="#" class="post" data-ct style="--d:.24s"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=700&q=80" alt="Coffee beans and a cup of espresso" loading="lazy" data-fallback="espresso" /><span class="post-ov"><b>♥ 930</b><small>Espresso before class</small></span></a>
+          <a href="#" class="post post-wide" data-ct style="--d:.32s"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1000&q=80" alt="Café counter with pastries" loading="lazy" data-fallback="bakery,counter" /><span class="post-ov"><b>♥ 1.5k</b><small>Bake sale for the food bank</small></span></a>
+          <a href="#" class="post" data-ct style="--d:.4s"><img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=700&q=80" alt="Barista pouring coffee at the counter" loading="lazy" data-fallback="barista" /><span class="post-ov"><b>♥ 588</b><small>Latte-art workshop</small></span></a>
+        </div>
+        <div class="tag-marquee" aria-hidden="true"><div class="tag-track"><span>#CookWithCulina</span><span>#HyderabadEats</span><span>#ChefLife</span><span>#WeekendWorkshop</span><span>#HomeCooksUnite</span><span>#FromScratch</span><span>#CookWithCulina</span><span>#HyderabadEats</span><span>#ChefLife</span><span>#WeekendWorkshop</span><span>#HomeCooksUnite</span><span>#FromScratch</span></div></div>
+      </div>
+    </section>
+
+    <!-- ================= 8. CTA — call-back request (pattern: paper planes) ================= -->
+    <section class="ct-cta" id="callback">
+      <svg class="ct-cta-pattern" aria-hidden="true"><defs><pattern id="paperPlanes" width="140" height="110" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)"><path d="M14 30 L46 18 L34 46 L29 35 Z M29 35 L46 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M50 40 q30 10 58 -6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="3 6"/><path d="M84 80 L108 71 L99 92 L95 84 Z M95 84 L108 71" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></pattern></defs><rect width="100%" height="100%" fill="url(#paperPlanes)"/></svg>
+      <div class="container cta-grid" data-ct>
+        <figure class="cta-photo"><img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=900&q=80" alt="Paper map with pins for planning a visit" loading="lazy" data-fallback="map,travel" /><span class="cta-stamp">Free · 15 min</span></figure>
+        <div class="cta-copy">
+          <span class="tagline">Rather talk it through?</span>
+          <h2>We'll call <em>you</em> back.</h2>
+          <p>Leave your number and pick a time — someone from the studio rings you, no hold music.</p>
+          <form class="cb-form" id="cbForm" novalidate>
+            <label class="cb-field"><span class="sr-only">Phone number</span><input name="cbPhone" type="tel" placeholder="Your phone number" autocomplete="tel" /></label>
+            <label class="cb-field"><span class="sr-only">Best time to call</span><select name="cbTime"><option>Morning · 9–12</option><option>Afternoon · 12–4</option><option selected>Evening · 4–8</option></select></label>
+            <button type="submit" class="btn btn-primary">Request a Call</button>
+          </form>
+          <p class="cb-msg" id="cbMsg" role="status"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="Culina Studio home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">
+            <span class="brand-name">Culina Studio</span>
+            <span class="brand-tagline">Explore • Cook • Master</span>
+          </span>
+        </a>
+        <p>A hands-on cooking school and culinary studio where every student cooks, tastes and learns from working chefs.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M11 8.5c3-1 5 .5 5 3 0 2.5-1.8 4-3.5 4-1.2 0-2-.8-2-.8L9 21"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Students</h4>
+        <ul>
+          <li><a href="login.html">Student Login</a></li>
+          <li><a href="user-dashboard.html#book">Book a Seat</a></li>
+          <li><a href="user-dashboard.html#saved">Recipe Library</a></li>
+          <li><a href="user-dashboard.html#orders">Payments</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <ul class="contact-list">
+          <li><b>Studio:</b> 12 Spice Lane, Banjara Hills, Hyderabad</li>
+          <li><b>Call:</b> <a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><b>Email:</b> <a href="mailto:hello@culinastudio.com">hello@culinastudio.com</a></li>
+          <li><b>Hours:</b> Tue – Sun · 9 AM – 9 PM</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Culina Studio. All rights reserved.</p>
+      <div class="legal">
+        <a href="#">Privacy Policy</a>
+        <span aria-hidden="true">•</span>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
+
+  <script src="contact.js" defer></script>
+</body>
+</html>

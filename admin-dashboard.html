@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — Culina Studio</title>
+  <meta name="description" content="Culina Studio admin dashboard: statistics, users, content, bookings, messages, settings and reports." />
+  <meta name="robots" content="noindex" />
+
+  <!-- Apply saved theme + direction before paint (prevents flash) and check sign-in -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('culina-theme');
+        var d = localStorage.getItem('culina-dir');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        if (d === 'rtl' || d === 'ltr') document.documentElement.setAttribute('dir', d);
+        // sign-in guard: send visitors who are not signed in to the login page
+        if (localStorage.getItem('culina-admin-session') !== 'signed-in') {
+          location.replace('login.html?role=admin&next=' + encodeURIComponent('admin-dashboard.html' + location.hash));
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="icon" type="image/png" href="logo-light.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-dashboard.css" />
+</head>
+<body class="dash admin-dash">
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <div class="app">
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="side" id="side" aria-label="Admin navigation">
+      <a href="index.html" class="brand" aria-label="Culina Studio home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-name">Culina Studio</span>
+          <span class="brand-tagline">Explore • Cook • Master</span>
+        </span>
+      </a>
+      <span class="side-role side-role-solid">Admin Console</span>
+
+      <nav class="side-nav">
+        <p class="side-label">Manage</p>
+        <a href="#overview" class="side-link" data-view="overview"><span class="ico" data-ico="grid"></span>Overview</a>
+        <a href="#users" class="side-link" data-view="users"><span class="ico" data-ico="users"></span>Users<b class="side-count" id="cntUsers"></b></a>
+        <a href="#content" class="side-link" data-view="content"><span class="ico" data-ico="layers"></span>Content</a>
+        <a href="#bookings" class="side-link" data-view="bookings"><span class="ico" data-ico="calendar"></span>Orders &amp; Bookings<b class="side-count" id="cntPending"></b></a>
+        <a href="#messages" class="side-link" data-view="messages"><span class="ico" data-ico="chat"></span>Messages<b class="side-count" id="cntMsgs"></b></a>
+        <p class="side-label">Insights &amp; System</p>
+        <a href="#reports" class="side-link" data-view="reports"><span class="ico" data-ico="chart"></span>Reports</a>
+        <a href="#settings" class="side-link" data-view="settings"><span class="ico" data-ico="gear"></span>Settings</a>
+        <button class="side-link side-logout" type="button" id="logoutBtn"><span class="ico" data-ico="logout"></span>Logout</button>
+      </nav>
+
+      <div class="side-foot">
+        <div class="side-status">
+          <span class="pulse" aria-hidden="true"></span>
+          <div><strong id="studioState">Studio is open</strong><small id="studioSub">Bookings are live</small></div>
+        </div>
+        <a href="user-dashboard.html" class="side-switch"><span class="ico" data-ico="user"></span>Switch to Student view</a>
+      </div>
+    </aside>
+    <div class="side-back" id="sideBack"></div>
+
+    <!-- ================= MAIN ================= -->
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open navigation" aria-controls="side" aria-expanded="false"><span class="ico" data-ico="menu"></span></button>
+        <div class="top-title">
+          <span class="crumb"><a href="index.html">Home</a> / Admin</span>
+          <h1 id="viewTitle">Overview</h1>
+        </div>
+        <label class="top-search">
+          <span class="ico" data-ico="search"></span>
+          <input type="search" id="globalSearch" placeholder="Search users, bookings, classes…" aria-label="Search the admin dashboard" />
+        </label>
+        <div class="top-actions">
+          <button class="icon-btn" id="dirToggle" type="button" aria-label="Toggle right-to-left layout"><span class="dir-label" aria-hidden="true">↔</span></button>
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode"><span class="ico" data-ico="moon"></span></button>
+          <div class="pop-wrap">
+            <button class="icon-btn bell" id="bellBtn" type="button" aria-label="Notifications" aria-expanded="false" aria-controls="notifPop"><span class="ico" data-ico="bell"></span><b class="bell-dot" id="bellDot" hidden></b></button>
+            <div class="pop" id="notifPop" hidden>
+              <div class="pop-head"><strong>Notifications</strong><button type="button" class="link-btn" id="markAllRead">Mark all read</button></div>
+              <ul class="notif-list" id="notifList"></ul>
+              <a href="#messages" class="pop-all" data-notif-tab>View all notifications</a>
+            </div>
+          </div>
+          <div class="pop-wrap">
+            <button class="avatar-btn" id="avatarBtn" type="button" aria-label="Account menu" aria-expanded="false" aria-controls="avatarPop"><span class="avatar" id="topAvatar">AR</span></button>
+            <div class="pop pop-sm" id="avatarPop" hidden>
+              <div class="pop-user"><strong id="popName">Ananya Rao</strong><small id="popEmail">Studio Manager</small></div>
+              <a href="#settings" class="pop-link">Settings</a>
+              <a href="#reports" class="pop-link">Reports</a>
+              <a href="index.html" class="pop-link">Back to Website</a>
+              <button type="button" class="pop-link" data-logout>Logout</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="content" id="content" tabindex="-1">
+        <section class="view" id="view-overview" data-title="Overview"></section>
+        <section class="view" id="view-users" data-title="User Management"></section>
+        <section class="view" id="view-content" data-title="Content Management"></section>
+        <section class="view" id="view-bookings" data-title="Orders &amp; Bookings"></section>
+        <section class="view" id="view-messages" data-title="Messages &amp; Notifications"></section>
+        <section class="view" id="view-reports" data-title="Reports &amp; Analytics"></section>
+        <section class="view" id="view-settings" data-title="Settings"></section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Chart tooltip, modal + toast roots -->
+  <div class="chart-tip" id="chartTip" role="status" hidden></div>
+  <div class="modal-back" id="modalBack" hidden>
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"></div>
+  </div>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="admin-dashboard.js" defer></script>
+</body>
+</html>

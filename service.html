@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Culina Studio | Explore • Cook • Master</title>
+  <meta name="description" content="Culina Studio services: hands-on cooking classes, private chef's table, corporate team cooking, kids camps, celebration parties and our recipe library." />
+
+  <!-- Apply saved theme + direction before paint (prevents flash) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('culina-theme');
+        var d = localStorage.getItem('culina-dir');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        if (d === 'rtl' || d === 'ltr') document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="icon" type="image/png" href="logo-light.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="service.css" />
+</head>
+<body class="service-page">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Culina Studio home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-name">Culina Studio</span>
+          <span class="brand-tagline">Explore • Cook • Master</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li class="has-dd">
+            <div class="dd-wrap">
+              <a href="index.html" class="nav-link">Home</a>
+              <button class="dd-toggle" type="button" aria-expanded="false" aria-controls="ddHome" aria-label="Show home page options"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </div>
+            <ul class="dd-menu" id="ddHome">
+              <li><a href="index.html" class="dd-link"><span class="dd-num">01</span><span class="dd-txt"><strong>Home 1</strong><small>Classic studio home</small></span></a></li>
+              <li><a href="home2.html" class="dd-link"><span class="dd-num">02</span><span class="dd-txt"><strong>Home 2</strong><small>Alternate home layout</small></span></a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="service.html" class="nav-link active" aria-current="page">Services</a></li>
+          <li><a href="classes.html" class="nav-link">Classes</a></li>
+          <li><a href="workshops.html" class="nav-link">Workshops</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="user-dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn dir-btn" id="dirToggle" type="button" aria-label="Toggle right-to-left layout" aria-pressed="false">
+          <span class="dir-label" aria-hidden="true">↔</span>
+        </button>
+        <a href="login.html" class="btn btn-primary header-cta magnetic">Login</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <main id="main">
+
+    <!-- ================= 1. HERO — spotlight orbit of services ================= -->
+    <section class="sv-hero" id="top">
+      <span class="sv-hero-big" aria-hidden="true">06</span>
+      <div class="container sv-hero-grid">
+        <div class="sv-hero-copy">
+          <span class="tagline sv-in" style="--d:.2s">Our Services</span>
+          <h1 class="sv-hero-title sv-in" style="--d:.3s">Six ways to <em>cook,</em> <span class="u-draw">celebrate</span> &amp; learn.</h1>
+          <p class="sv-hero-text sv-in" style="--d:.45s">From a first knife lesson to a ten-course chef's table, every Culina Studio service is hands-on, chef-led and designed around how you love to cook.</p>
+          <div class="sv-hero-actions sv-in" style="--d:.6s">
+            <a href="#services" class="btn btn-primary magnetic">Explore Services</a>
+            <a href="#works" class="btn btn-secondary">See Our Work</a>
+          </div>
+          <ul class="sv-hero-badges sv-in" style="--d:.75s">
+            <li><strong>12+</strong><span>years</span></li>
+            <li><strong>14</strong><span>resident chefs</span></li>
+            <li><strong>4.9★</strong><span>2,300+ reviews</span></li>
+          </ul>
+        </div>
+
+        <div class="sv-hero-visual sv-in" style="--d:.35s">
+          <div class="frame frame-a"><img src="https://images.unsplash.com/photo-1600628421055-4d30de868b8f?auto=format&fit=crop&w=1000&q=80" alt="Chef presenting a finished plate" data-fallback="chef,plate" /></div>
+          <div class="frame frame-b"><img src="https://images.unsplash.com/photo-1612203985729-70726954388c?auto=format&fit=crop&w=700&q=80" alt="Close-up of a garnished dish" data-fallback="garnish,dish" /></div>
+          <div class="orbit-ring" aria-hidden="true"></div>
+          <div class="orbit-pills" role="group" aria-label="Service spotlight"><button class="orbit-pill" type="button" data-i="0" data-service="hands-on-classes" style="--i:0" aria-label="Hands-On Classes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.9V20h12v-6.1"/><path d="M6 14a4 4 0 1 1 1.6-7.7A5 5 0 0 1 16.4 6.3 4 4 0 1 1 18 14z"/><path d="M6 17h12"/></svg></button><button class="orbit-pill" type="button" data-i="1" data-service="private-chefs-table" style="--i:1" aria-label="Private Chef's Table"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18"/><path d="M5 11a7 7 0 0 1 14 0"/><path d="M12 4V2"/><path d="M4 15h16l-1 3H5z"/></svg></button><button class="orbit-pill" type="button" data-i="2" data-service="corporate-team-cooking" style="--i:2" aria-label="Corporate Team Cooking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M15 20a4.5 4.5 0 0 1 6-4.2"/></svg></button><button class="orbit-pill" type="button" data-i="3" data-service="kids-teens-camps" style="--i:3" aria-label="Kids & Teens Camps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></button><button class="orbit-pill" type="button" data-i="4" data-service="celebration-parties" style="--i:4" aria-label="Celebration Parties"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 13h18"/><path d="M12 8c-2-4-6-4-6-1.5S10 8 12 8zM12 8c2-4 6-4 6-1.5S14 8 12 8z"/></svg></button><button class="orbit-pill" type="button" data-i="5" data-service="recipe-library" style="--i:5" aria-label="Recipe Library & Replays"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3z"/><path d="M4 17a3 3 0 0 1 3-3h11"/><path d="M8 8h6"/></svg></button></div>
+          <a class="spotlight" id="spotlight" href="service-detail.html?service=hands-on-classes">
+            <span class="spot-num" id="spotNum">01 / 06</span>
+            <strong id="spotTitle">Hands-On Classes</strong>
+            <span class="spot-link">View service <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 2. SERVICE CARDS ================= -->
+    <section class="sv-section sv-services" id="services">
+      <div class="container">
+        <div class="sv-head" data-sv="up">
+          <span class="tagline">What We Offer</span>
+          <h2 class="sv-title">Choose your experience</h2>
+          <p class="sv-text">Six services, one promise: you'll cook, you'll learn and you'll eat very well. Tap "View Service" for full details and pricing.</p>
+        </div>
+        <div class="sv-grid">
+          <article class="sv-card" data-service="hands-on-classes" data-sv="up" style="--stagger:0">
+            <div class="sv-card-img">
+              <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80" alt="Students cooking at their stations" loading="lazy" data-fallback="cooking,class" />
+              <span class="chip">Most popular</span>
+              <span class="sv-num">01</span>
+            </div>
+            <div class="sv-card-body">
+              <span class="sv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.9V20h12v-6.1"/><path d="M6 14a4 4 0 1 1 1.6-7.7A5 5 0 0 1 16.4 6.3 4 4 0 1 1 18 14z"/><path d="M6 17h12"/></svg></span>
+              <h3>Hands-On Classes</h3>
+              <p>Cuisine classes for every level, with your own station and a chef at your side.</p>
+              <ul class="sv-meta"><li>3 hrs</li><li>From ₹2,999</li></ul>
+              <a href="service-detail.html?service=hands-on-classes" class="btn btn-primary btn-sm sv-view" data-service="hands-on-classes">View Service <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="sv-card" data-service="private-chefs-table" data-sv="up" style="--stagger:1">
+            <div class="sv-card-img">
+              <img src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?auto=format&fit=crop&w=800&q=80" alt="Elegant tasting-menu course" loading="lazy" data-fallback="tasting,menu" />
+              <span class="chip">Signature</span>
+              <span class="sv-num">02</span>
+            </div>
+            <div class="sv-card-body">
+              <span class="sv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18"/><path d="M5 11a7 7 0 0 1 14 0"/><path d="M12 4V2"/><path d="M4 15h16l-1 3H5z"/></svg></span>
+              <h3>Private Chef's Table</h3>
+              <p>An intimate tasting menu cooked in front of you, course by course.</p>
+              <ul class="sv-meta"><li>4 hrs</li><li>From ₹6,500</li></ul>
+              <a href="service-detail.html?service=private-chefs-table" class="btn btn-primary btn-sm sv-view" data-service="private-chefs-table">View Service <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="sv-card" data-service="corporate-team-cooking" data-sv="up" style="--stagger:2">
+            <div class="sv-card-img">
+              <img src="https://images.unsplash.com/photo-1556761223-4c4282c73f77?auto=format&fit=crop&w=800&q=80" alt="Team collaborating together" loading="lazy" data-fallback="team,building" />
+              <span class="chip">10–40 guests</span>
+              <span class="sv-num">03</span>
+            </div>
+            <div class="sv-card-body">
+              <span class="sv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M15 20a4.5 4.5 0 0 1 6-4.2"/></svg></span>
+              <h3>Corporate Team Cooking</h3>
+              <p>Kitchen challenges that turn colleagues into a crew — then lunch together.</p>
+              <ul class="sv-meta"><li>3–5 hrs</li><li>From ₹3,200</li></ul>
+              <a href="service-detail.html?service=corporate-team-cooking" class="btn btn-primary btn-sm sv-view" data-service="corporate-team-cooking">View Service <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="sv-card" data-service="kids-teens-camps" data-sv="up" style="--stagger:0">
+            <div class="sv-card-img">
+              <img src="https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=800&q=80" alt="Colourful food prepared at camp" loading="lazy" data-fallback="kids,cooking" />
+              <span class="chip">Ages 7–16</span>
+              <span class="sv-num">04</span>
+            </div>
+            <div class="sv-card-body">
+              <span class="sv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></span>
+              <h3>Kids & Teens Camps</h3>
+              <p>Safe, playful holiday camps that build real kitchen confidence.</p>
+              <ul class="sv-meta"><li>5 days</li><li>From ₹8,999</li></ul>
+              <a href="service-detail.html?service=kids-teens-camps" class="btn btn-primary btn-sm sv-view" data-service="kids-teens-camps">View Service <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="sv-card" data-service="celebration-parties" data-sv="up" style="--stagger:1">
+            <div class="sv-card-img">
+              <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" alt="Party balloons and celebration" loading="lazy" data-fallback="party,celebration" />
+              <span class="chip">Up to 30</span>
+              <span class="sv-num">05</span>
+            </div>
+            <div class="sv-card-body">
+              <span class="sv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 13h18"/><path d="M12 8c-2-4-6-4-6-1.5S10 8 12 8zM12 8c2-4 6-4 6-1.5S14 8 12 8z"/></svg></span>
+              <h3>Celebration Parties</h3>
+              <p>Birthdays and celebrations hosted around a counter full of food.</p>
+              <ul class="sv-meta"><li>3 hrs</li><li>From ₹2,499</li></ul>
+              <a href="service-detail.html?service=celebration-parties" class="btn btn-primary btn-sm sv-view" data-service="celebration-parties">View Service <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="sv-card" data-service="recipe-library" data-sv="up" style="--stagger:2">
+            <div class="sv-card-img">
+              <img src="https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=800&q=80" alt="Recipe dish ready to cook" loading="lazy" data-fallback="recipe,dish" />
+              <span class="chip">Online</span>
+              <span class="sv-num">06</span>
+            </div>
+            <div class="sv-card-body">
+              <span class="sv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3z"/><path d="M4 17a3 3 0 0 1 3-3h11"/><path d="M8 8h6"/></svg></span>
+              <h3>Recipe Library & Replays</h3>
+              <p>Every recipe and class replay, organised in your student dashboard.</p>
+              <ul class="sv-meta"><li>Anytime</li><li>₹499 / month</li></ul>
+              <a href="service-detail.html?service=recipe-library" class="btn btn-primary btn-sm sv-view" data-service="recipe-library">View Service <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. FAQS ================= -->
+    <section class="sv-section sv-faq" id="faq">
+      <div class="container sv-faq-grid">
+        <div class="sv-faq-side" data-sv="left">
+          <span class="tagline">Good to Know</span>
+          <h2 class="sv-title">Frequently asked questions</h2>
+          <p class="sv-text">Can't find what you're looking for? Our team replies within one working day.</p>
+          <div class="help-card">
+            <span class="help-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+            <div><strong>Still have questions?</strong><a href="mailto:hello@culinastudio.com">hello@culinastudio.com</a></div>
+          </div>
+        </div>
+        <div class="faq" id="svFaq" data-sv="right">
+            <div class="faq-item is-open">
+              <button class="faq-q" type="button" aria-expanded="true"><span class="faq-n">01</span>How do I choose the right service?<span class="faq-icon" aria-hidden="true"></span></button>
+              <div class="faq-a"><p>If you want to learn a cuisine, start with Hands-On Classes. For groups, look at Corporate Team Cooking or Celebration Parties, and for an evening out, the Private Chef's Table.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false"><span class="faq-n">02</span>Can services be customised?<span class="faq-icon" aria-hidden="true"></span></button>
+              <div class="faq-a"><p>Yes. Menus, group size, dietary needs and timings can all be tailored — tell us what you have in mind and we'll design it with you.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false"><span class="faq-n">03</span>What is included in the price?<span class="faq-icon" aria-hidden="true"></span></button>
+              <div class="faq-a"><p>All ingredients, equipment, aprons, recipe cards and the meal you cook. Drinks packages and take-home kits are optional extras.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false"><span class="faq-n">04</span>How far in advance should I book?<span class="faq-icon" aria-hidden="true"></span></button>
+              <div class="faq-a"><p>Regular classes can be booked up to the day before. Private and group services need at least 7 days so we can source ingredients.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false"><span class="faq-n">05</span>Do you offer gift vouchers?<span class="faq-icon" aria-hidden="true"></span></button>
+              <div class="faq-a"><p>Yes — gift cards work for every service and are valid for 12 months from the date of purchase.</p></div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. GALLERY — our works ================= -->
+    <section class="sv-section sv-works" id="works">
+      <div class="container">
+        <div class="sv-head" data-sv="up">
+          <span class="tagline">Our Work</span>
+          <h2 class="sv-title">A taste of what we've created</h2>
+          <p class="sv-text">Real moments from our services — tap a photo to view it larger.</p>
+        </div>
+        <div class="works-grid">
+          <figure class="work tall" data-sv="zoom" style="--stagger:0" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?auto=format&fit=crop&w=900&q=80" alt="Plated dish from a chef's table evening" loading="lazy" data-fallback="chef,table" />
+            <figcaption><span class="chip">Chef's Table</span><strong>Plated dish from a chef's table evening</strong></figcaption>
+          </figure>
+          <figure class="work " data-sv="zoom" style="--stagger:1" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=900&q=80" alt="Dish cooked at a corporate team day" loading="lazy" data-fallback="corporate,lunch" />
+            <figcaption><span class="chip">Corporate Day</span><strong>Dish cooked at a corporate team day</strong></figcaption>
+          </figure>
+          <figure class="work " data-sv="zoom" style="--stagger:2" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80" alt="Food prepared in a hands-on class" loading="lazy" data-fallback="class,dish" />
+            <figcaption><span class="chip">Hands-On Class</span><strong>Food prepared in a hands-on class</strong></figcaption>
+          </figure>
+          <figure class="work wide" data-sv="zoom" style="--stagger:0" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=80" alt="Treats made at kids camp" loading="lazy" data-fallback="kids,treats" />
+            <figcaption><span class="chip">Kids Camp</span><strong>Treats made at kids camp</strong></figcaption>
+          </figure>
+          <figure class="work " data-sv="zoom" style="--stagger:1" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=900&q=80" alt="Spread from a birthday party" loading="lazy" data-fallback="birthday,spread" />
+            <figcaption><span class="chip">Birthday Party</span><strong>Spread from a birthday party</strong></figcaption>
+          </figure>
+          <figure class="work " data-sv="zoom" style="--stagger:2" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=900&q=80" alt="Dish from a recipe replay" loading="lazy" data-fallback="recipe,replay" />
+            <figcaption><span class="chip">Recipe Library</span><strong>Dish from a recipe replay</strong></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5. CTA CARD ================= -->
+    <section class="sv-cta" id="cta">
+      <div class="container">
+        <div class="cta-card" data-sv="up">
+          <svg class="cta-waves" aria-hidden="true" focusable="false"><defs><pattern id="ptWaves" width="80" height="24" patternUnits="userSpaceOnUse"><path d="M0 12 Q20 0 40 12 T80 12" fill="none" stroke="currentColor" stroke-width="1.6"/></pattern></defs><rect width="100%" height="100%" fill="url(#ptWaves)"/></svg>
+          <div class="cta-copy">
+            <span class="tagline tagline-on">Not Sure Where to Start?</span>
+            <h2>Let's plan your perfect kitchen experience</h2>
+            <p>Tell us the occasion, group size and favourite cuisine — we'll recommend the right service and send a quote within 24 hours.</p>
+            <div class="cta-actions">
+              <a href="classes.html#request" class="btn btn-light">Get a Free Quote</a>
+              <a href="tel:+919876543210" class="btn btn-outline-light">Call +91 98765 43210</a>
+            </div>
+          </div>
+          <figure class="cta-img"><img src="https://images.unsplash.com/photo-1547573854-74d2a71d0826?auto=format&fit=crop&w=800&q=80" alt="Beautifully plated dish ready to serve" loading="lazy" data-fallback="plated,food" /></figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="Culina Studio home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">
+            <span class="brand-name">Culina Studio</span>
+            <span class="brand-tagline">Explore • Cook • Master</span>
+          </span>
+        </a>
+        <p>A hands-on cooking school and culinary studio where every student cooks, tastes and learns from working chefs.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M11 8.5c3-1 5 .5 5 3 0 2.5-1.8 4-3.5 4-1.2 0-2-.8-2-.8L9 21"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Students</h4>
+        <ul>
+          <li><a href="login.html">Student Login</a></li>
+          <li><a href="user-dashboard.html#book">Book a Seat</a></li>
+          <li><a href="user-dashboard.html#saved">Recipe Library</a></li>
+          <li><a href="user-dashboard.html#orders">Payments</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <ul class="contact-list">
+          <li><b>Studio:</b> 12 Spice Lane, Banjara Hills, Hyderabad</li>
+          <li><b>Call:</b> <a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><b>Email:</b> <a href="mailto:hello@culinastudio.com">hello@culinastudio.com</a></li>
+          <li><b>Hours:</b> Tue – Sun · 9 AM – 9 PM</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Culina Studio. All rights reserved.</p>
+      <div class="legal">
+        <a href="#">Privacy Policy</a>
+        <span aria-hidden="true">•</span>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <!-- Lightbox -->
+  <div class="sv-lightbox" id="svLightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button class="svlb-btn svlb-close" id="svlbClose" type="button" aria-label="Close">✕</button>
+    <button class="svlb-btn svlb-prev" id="svlbPrev" type="button" aria-label="Previous photo">←</button>
+    <figure class="svlb-fig"><img id="svlbImg" src="" alt="" /><figcaption id="svlbCap"></figcaption></figure>
+    <button class="svlb-btn svlb-next" id="svlbNext" type="button" aria-label="Next photo">→</button>
+  </div>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
+
+  <script src="service.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Details — Culina Studio | Explore • Cook • Master</title>
+  <meta name="description" content="Details, pricing and FAQs for Culina Studio services." />
+
+  <!-- Apply saved theme + direction before paint (prevents flash) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('culina-theme');
+        var d = localStorage.getItem('culina-dir');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        if (d === 'rtl' || d === 'ltr') document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="icon" type="image/png" href="logo-light.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="service-detail.css" />
+</head>
+<body class="service-detail-page">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Culina Studio home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-name">Culina Studio</span>
+          <span class="brand-tagline">Explore • Cook • Master</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li class="has-dd">
+            <div class="dd-wrap">
+              <a href="index.html" class="nav-link">Home</a>
+              <button class="dd-toggle" type="button" aria-expanded="false" aria-controls="ddHome" aria-label="Show home page options"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </div>
+            <ul class="dd-menu" id="ddHome">
+              <li><a href="index.html" class="dd-link"><span class="dd-num">01</span><span class="dd-txt"><strong>Home 1</strong><small>Classic studio home</small></span></a></li>
+              <li><a href="home2.html" class="dd-link"><span class="dd-num">02</span><span class="dd-txt"><strong>Home 2</strong><small>Alternate home layout</small></span></a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="service.html" class="nav-link active" aria-current="page">Services</a></li>
+          <li><a href="classes.html" class="nav-link">Classes</a></li>
+          <li><a href="workshops.html" class="nav-link">Workshops</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="user-dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn dir-btn" id="dirToggle" type="button" aria-label="Toggle right-to-left layout" aria-pressed="false">
+          <span class="dir-label" aria-hidden="true">↔</span>
+        </button>
+        <a href="login.html" class="btn btn-primary header-cta magnetic">Login</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <main id="main">
+
+    <!-- ================= 1. HERO BANNER (filled by service-detail.js) ================= -->
+    <section class="sd-hero" id="top">
+      <div class="sd-hero-media"><img id="sdHeroImg" src="" alt="" data-fallback="cooking" /></div>
+      <div class="sd-hero-overlay" aria-hidden="true"></div>
+      <div class="sd-hero-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="container sd-hero-inner">
+        <div class="sd-hero-card">
+          <div class="sd-index"><b id="sdNum">01</b><i aria-hidden="true"></i><span>06</span></div>
+          <span class="tagline tagline-on" id="sdTag">Service</span>
+          <h1 class="sd-title" id="sdTitle">Loading service…</h1>
+          <p class="sd-lead" id="sdLead"></p>
+          <ul class="sd-facts" id="sdFacts"></ul>
+          <div class="sd-actions">
+            <a href="#pricing" class="btn btn-light">Book This Service</a>
+            <a href="#faq" class="btn btn-outline-light">Ask a Question</a>
+          </div>
+        </div>
+        <div class="sd-switch">
+          <a class="sd-nav sd-prev" id="sdPrev" href="#"><span class="sd-arrow" aria-hidden="true">←</span><span><small>Previous</small><strong id="sdPrevName"></strong></span></a>
+          <a class="sd-nav sd-next" id="sdNext" href="#"><span><small>Next</small><strong id="sdNextName"></strong></span><span class="sd-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <nav class="sd-tabs container" id="sdTabs" aria-label="All services"></nav>
+    </section>
+
+    <!-- ================= 2. SERVICE CONTEXT ================= -->
+    <section class="sd-section sd-context" id="overview">
+      <div class="container sd-context-grid">
+        <div class="sd-context-media" data-sd="left">
+          <figure class="sd-ctx-img"><img id="sdCtxImg" src="" alt="" loading="lazy" data-fallback="kitchen" /></figure>
+          <ul class="sd-stats" id="sdStats"></ul>
+        </div>
+        <div class="sd-context-copy" data-sd="right">
+          <span class="tagline">About This Service</span>
+          <h2 class="sd-h2" id="sdCtxTitle"></h2>
+          <div class="sd-ctx-text" id="sdCtxText"></div>
+          <h3 class="sd-h3">What's included</h3>
+          <ul class="sd-included" id="sdIncluded"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. WHY CHOOSE ================= -->
+    <section class="sd-section sd-why" id="why">
+      <div class="container">
+        <div class="sd-head" data-sd="up">
+          <span class="tagline">Why Choose This Service</span>
+          <h2 class="sd-h2" id="sdWhyTitle">Why guests love it</h2>
+        </div>
+        <div class="sd-bento" id="sdReasons"></div>
+      </div>
+    </section>
+
+    <!-- ================= 4. PRICING ================= -->
+    <section class="sd-section sd-pricing" id="pricing">
+      <div class="container">
+        <div class="sd-head" data-sd="up">
+          <span class="tagline">Pricing</span>
+          <h2 class="sd-h2" id="sdPriceTitle">Simple, transparent pricing</h2>
+          <p class="sd-text">All prices include ingredients, equipment and taxes. No hidden extras.</p>
+        </div>
+        <div class="sd-plans" id="sdPlans"></div>
+      </div>
+    </section>
+
+    <!-- ================= 5. FAQS ================= -->
+    <section class="sd-section sd-faq" id="faq">
+      <div class="container sd-faq-grid">
+        <div class="sd-faq-side" data-sd="left">
+          <span class="tagline">FAQs</span>
+          <h2 class="sd-h2" id="sdFaqTitle">Questions about this service</h2>
+          <p class="sd-text">Still unsure? Message us and a member of our team will help you plan.</p>
+          <a href="mailto:hello@culinastudio.com" class="btn btn-secondary">Email Our Team</a>
+        </div>
+        <div class="sd-faqs" id="sdFaqs" data-sd="right"></div>
+      </div>
+    </section>
+
+    <!-- ================= 6. CTA ================= -->
+    <section class="sd-cta" id="cta">
+      <div class="container">
+        <div class="sd-cta-card" data-sd="up">
+          <svg class="sd-cta-pattern" aria-hidden="true" focusable="false"><defs><pattern id="ptHex" width="56" height="48" patternUnits="userSpaceOnUse"><path d="M14 2h28l14 22-14 22H14L0 24z" fill="none" stroke="currentColor" stroke-width="1.4"/></pattern></defs><rect width="100%" height="100%" fill="url(#ptHex)"/></svg>
+          <div class="sd-cta-badge" aria-hidden="true"><span id="sdCtaIcon"></span></div>
+          <div class="sd-cta-copy">
+            <span class="tagline tagline-on">Ready When You Are</span>
+            <h2 id="sdCtaTitle"></h2>
+            <p id="sdCtaText"></p>
+          </div>
+          <div class="sd-cta-actions">
+            <a href="#pricing" class="btn btn-light" id="sdCtaBtn">Book Now</a>
+            <a href="tel:+919876543210" class="btn btn-outline-light">Call Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. OTHER SERVICES ================= -->
+    <section class="sd-section sd-more" id="more">
+      <div class="container">
+        <div class="sd-more-head" data-sd="up">
+          <div><span class="tagline">Keep Exploring</span><h2 class="sd-h2">Other services you may like</h2></div>
+          <a href="service.html#services" class="btn btn-secondary">All Services</a>
+        </div>
+        <div class="sd-more-grid" id="sdMore"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="Culina Studio home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">
+            <span class="brand-name">Culina Studio</span>
+            <span class="brand-tagline">Explore • Cook • Master</span>
+          </span>
+        </a>
+        <p>A hands-on cooking school and culinary studio where every student cooks, tastes and learns from working chefs.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M11 8.5c3-1 5 .5 5 3 0 2.5-1.8 4-3.5 4-1.2 0-2-.8-2-.8L9 21"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Students</h4>
+        <ul>
+          <li><a href="login.html">Student Login</a></li>
+          <li><a href="user-dashboard.html#book">Book a Seat</a></li>
+          <li><a href="user-dashboard.html#saved">Recipe Library</a></li>
+          <li><a href="user-dashboard.html#orders">Payments</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <ul class="contact-list">
+          <li><b>Studio:</b> 12 Spice Lane, Banjara Hills, Hyderabad</li>
+          <li><b>Call:</b> <a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><b>Email:</b> <a href="mailto:hello@culinastudio.com">hello@culinastudio.com</a></li>
+          <li><b>Hours:</b> Tue – Sun · 9 AM – 9 PM</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Culina Studio. All rights reserved.</p>
+      <div class="legal">
+        <a href="#">Privacy Policy</a>
+        <span aria-hidden="true">•</span>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
+
+  <script src="service-detail.js" defer></script>
+</body>
+</html>
